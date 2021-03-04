@@ -1,0 +1,744 @@
+(2ndPaper-t2) stu4@triton01:~/HW4_yoel_amit$ python HW4.py
+2021-03-04 15:34:42.124015: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2021-03-04 15:34:42.124046: I tensorflow/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2021-03-04 15:34:45.714649: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-03-04 15:34:45.721178: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-03-04 15:34:45.723337: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcuda.so.1
+2021-03-04 15:34:45.743777: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:5e:00.0 name: GeForce RTX 2080 computeCapability: 7.5
+coreClock: 1.71GHz coreCount: 46 deviceMemorySize: 7.77GiB deviceMemoryBandwidth: 417.23GiB/s
+2021-03-04 15:34:45.743854: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2021-03-04 15:34:45.743901: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcublas.so.11'; dlerror: libcublas.so.11: cannot open shared object file: No such file or directory
+2021-03-04 15:34:45.743940: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcublasLt.so.11'; dlerror: libcublasLt.so.11: cannot open shared object file: No such file or directory
+2021-03-04 15:34:45.745773: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-03-04 15:34:45.746067: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-03-04 15:34:45.747889: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-03-04 15:34:45.747965: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcusparse.so.11'; dlerror: libcusparse.so.11: cannot open shared object file: No such file or directory
+2021-03-04 15:34:45.748010: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcudnn.so.8'; dlerror: libcudnn.so.8: cannot open shared object file: No such file or directory
+2021-03-04 15:34:45.748021: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1757] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2021-03-04 15:34:45.841921: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-03-04 15:34:45.841957: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      0 
+2021-03-04 15:34:45.841966: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1280] 0:   N 
+WARNING:tensorflow:From HW4.py:52: The name tf.keras.backend.set_session is deprecated. Please use tf.compat.v1.keras.backend.set_session instead.
+
+2021-03-04 15:35:07.251145: I tensorflow/compiler/jit/xla_cpu_device.cc:41] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-03-04 15:35:07.253488: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1720] Found device 0 with properties: 
+pciBusID: 0000:5e:00.0 name: GeForce RTX 2080 computeCapability: 7.5
+coreClock: 1.71GHz coreCount: 46 deviceMemorySize: 7.77GiB deviceMemoryBandwidth: 417.23GiB/s
+2021-03-04 15:35:07.253657: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory
+2021-03-04 15:35:07.253733: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcublas.so.11'; dlerror: libcublas.so.11: cannot open shared object file: No such file or directory
+2021-03-04 15:35:07.253798: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcublasLt.so.11'; dlerror: libcublasLt.so.11: cannot open shared object file: No such file or directory
+2021-03-04 15:35:07.253821: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcufft.so.10
+2021-03-04 15:35:07.253837: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcurand.so.10
+2021-03-04 15:35:07.253853: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcusolver.so.10
+2021-03-04 15:35:07.253909: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcusparse.so.11'; dlerror: libcusparse.so.11: cannot open shared object file: No such file or directory
+2021-03-04 15:35:07.253973: W tensorflow/stream_executor/platform/default/dso_loader.cc:60] Could not load dynamic library 'libcudnn.so.8'; dlerror: libcudnn.so.8: cannot open shared object file: No such file or directory
+2021-03-04 15:35:07.253985: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1757] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+2021-03-04 15:35:07.254298: I tensorflow/compiler/jit/xla_gpu_device.cc:99] Not creating XLA devices, tf_xla_enable_xla_devices not set
+2021-03-04 15:35:07.254325: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1261] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-03-04 15:35:07.254334: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1267]      
+Model: "RELU_64_batches"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+flatten (Flatten)            (None, 1024)              0         
+_________________________________________________________________
+dense (Dense)                (None, 300)               307500    
+_________________________________________________________________
+Relu1 (Activation)           (None, 300)               0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 150)               45150     
+_________________________________________________________________
+Relu2 (Activation)           (None, 150)               0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 4)                 604       
+_________________________________________________________________
+activation (Activation)      (None, 4)                 0         
+=================================================================
+Total params: 353,254
+Trainable params: 353,254
+Non-trainable params: 0
+_________________________________________________________________
+2021-03-04 15:35:07.426628: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:116] None of the MLIR optimization passes are enabled (registered 2)
+2021-03-04 15:35:07.449761: I tensorflow/core/platform/profile_utils/cpu_utils.cc:112] CPU Frequency: 2100000000 Hz
+Epoch 1/25
+102/102 - 1s - loss: 1.2804 - accuracy: 0.4997 - val_loss: 1.1730 - val_accuracy: 0.6319
+Epoch 2/25
+102/102 - 0s - loss: 1.1037 - accuracy: 0.6464 - val_loss: 1.0509 - val_accuracy: 0.6481
+Epoch 3/25
+102/102 - 0s - loss: 1.0089 - accuracy: 0.6813 - val_loss: 0.9778 - val_accuracy: 0.6962
+Epoch 4/25
+102/102 - 0s - loss: 0.9455 - accuracy: 0.7088 - val_loss: 0.9266 - val_accuracy: 0.7188
+Epoch 5/25
+102/102 - 0s - loss: 0.8970 - accuracy: 0.7254 - val_loss: 0.8856 - val_accuracy: 0.7384
+Epoch 6/25
+102/102 - 0s - loss: 0.8594 - accuracy: 0.7360 - val_loss: 0.8520 - val_accuracy: 0.7442
+Epoch 7/25
+102/102 - 0s - loss: 0.8280 - accuracy: 0.7467 - val_loss: 0.8231 - val_accuracy: 0.7471
+Epoch 8/25
+102/102 - 0s - loss: 0.7996 - accuracy: 0.7547 - val_loss: 0.7988 - val_accuracy: 0.7564
+Epoch 9/25
+102/102 - 0s - loss: 0.7739 - accuracy: 0.7610 - val_loss: 0.7739 - val_accuracy: 0.7703
+Epoch 10/25
+102/102 - 0s - loss: 0.7491 - accuracy: 0.7717 - val_loss: 0.7509 - val_accuracy: 0.7789
+Epoch 11/25
+102/102 - 0s - loss: 0.7262 - accuracy: 0.7793 - val_loss: 0.7280 - val_accuracy: 0.7818
+Epoch 12/25
+102/102 - 0s - loss: 0.7047 - accuracy: 0.7870 - val_loss: 0.7120 - val_accuracy: 0.7888
+Epoch 13/25
+102/102 - 0s - loss: 0.6857 - accuracy: 0.7905 - val_loss: 0.6913 - val_accuracy: 0.7946
+Epoch 14/25
+102/102 - 0s - loss: 0.6677 - accuracy: 0.7958 - val_loss: 0.6781 - val_accuracy: 0.7894
+Epoch 15/25
+102/102 - 0s - loss: 0.6510 - accuracy: 0.8011 - val_loss: 0.6628 - val_accuracy: 0.7975
+Epoch 16/25
+102/102 - 0s - loss: 0.6346 - accuracy: 0.8066 - val_loss: 0.6452 - val_accuracy: 0.8050
+Epoch 17/25
+102/102 - 0s - loss: 0.6202 - accuracy: 0.8116 - val_loss: 0.6318 - val_accuracy: 0.8050
+Epoch 18/25
+102/102 - 0s - loss: 0.6053 - accuracy: 0.8171 - val_loss: 0.6183 - val_accuracy: 0.8125
+Epoch 19/25
+102/102 - 0s - loss: 0.5918 - accuracy: 0.8228 - val_loss: 0.6052 - val_accuracy: 0.8148
+Epoch 20/25
+102/102 - 0s - loss: 0.5785 - accuracy: 0.8239 - val_loss: 0.5935 - val_accuracy: 0.8177
+Epoch 21/25
+102/102 - 0s - loss: 0.5669 - accuracy: 0.8256 - val_loss: 0.5825 - val_accuracy: 0.8218
+Epoch 22/25
+102/102 - 0s - loss: 0.5553 - accuracy: 0.8309 - val_loss: 0.5731 - val_accuracy: 0.8229
+Epoch 23/25
+102/102 - 0s - loss: 0.5439 - accuracy: 0.8333 - val_loss: 0.5636 - val_accuracy: 0.8270
+Epoch 24/25
+102/102 - 0s - loss: 0.5339 - accuracy: 0.8361 - val_loss: 0.5528 - val_accuracy: 0.8299
+Epoch 25/25
+102/102 - 0s - loss: 0.5248 - accuracy: 0.8407 - val_loss: 0.5461 - val_accuracy: 0.8316
+6/6 - 0s - loss: 0.7990 - accuracy: 0.6629
+
+
+Loss and metrics for RELU model with 64 batches and 25 epochs: 
+Test Loss is 0.80 
+Test Accuracy is 66.29 %
+
+Model: "TANH"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+flatten_1 (Flatten)          (None, 1024)              0         
+_________________________________________________________________
+dense_3 (Dense)              (None, 300)               307500    
+_________________________________________________________________
+tanh1 (Activation)           (None, 300)               0         
+_________________________________________________________________
+dense_4 (Dense)              (None, 150)               45150     
+_________________________________________________________________
+tanh2 (Activation)           (None, 150)               0         
+_________________________________________________________________
+dense_5 (Dense)              (None, 4)                 604       
+_________________________________________________________________
+activation_1 (Activation)    (None, 4)                 0         
+=================================================================
+Total params: 353,254
+Trainable params: 353,254
+Non-trainable params: 0
+_________________________________________________________________
+Epoch 1/25
+102/102 - 1s - loss: 1.3366 - accuracy: 0.3860 - val_loss: 1.2206 - val_accuracy: 0.5185
+Epoch 2/25
+102/102 - 0s - loss: 1.1464 - accuracy: 0.5794 - val_loss: 1.0916 - val_accuracy: 0.6065
+Epoch 3/25
+102/102 - 0s - loss: 1.0466 - accuracy: 0.6420 - val_loss: 1.0168 - val_accuracy: 0.6343
+Epoch 4/25
+102/102 - 0s - loss: 0.9821 - accuracy: 0.6716 - val_loss: 0.9638 - val_accuracy: 0.6713
+Epoch 5/25
+102/102 - 0s - loss: 0.9355 - accuracy: 0.6912 - val_loss: 0.9245 - val_accuracy: 0.6962
+Epoch 6/25
+102/102 - 0s - loss: 0.8984 - accuracy: 0.7017 - val_loss: 0.8933 - val_accuracy: 0.7078
+Epoch 7/25
+102/102 - 0s - loss: 0.8651 - accuracy: 0.7135 - val_loss: 0.8701 - val_accuracy: 0.6950
+Epoch 8/25
+102/102 - 0s - loss: 0.8389 - accuracy: 0.7190 - val_loss: 0.8443 - val_accuracy: 0.7216
+Epoch 9/25
+102/102 - 0s - loss: 0.8158 - accuracy: 0.7274 - val_loss: 0.8219 - val_accuracy: 0.7280
+Epoch 10/25
+102/102 - 0s - loss: 0.7946 - accuracy: 0.7357 - val_loss: 0.8036 - val_accuracy: 0.7332
+Epoch 11/25
+102/102 - 0s - loss: 0.7756 - accuracy: 0.7394 - val_loss: 0.7880 - val_accuracy: 0.7332
+Epoch 12/25
+102/102 - 0s - loss: 0.7592 - accuracy: 0.7467 - val_loss: 0.7729 - val_accuracy: 0.7413
+Epoch 13/25
+102/102 - 0s - loss: 0.7436 - accuracy: 0.7504 - val_loss: 0.7581 - val_accuracy: 0.7454
+Epoch 14/25
+102/102 - 0s - loss: 0.7287 - accuracy: 0.7589 - val_loss: 0.7478 - val_accuracy: 0.7465
+Epoch 15/25
+102/102 - 0s - loss: 0.7161 - accuracy: 0.7589 - val_loss: 0.7346 - val_accuracy: 0.7517
+Epoch 16/25
+102/102 - 0s - loss: 0.7032 - accuracy: 0.7637 - val_loss: 0.7240 - val_accuracy: 0.7535
+Epoch 17/25
+102/102 - 0s - loss: 0.6909 - accuracy: 0.7700 - val_loss: 0.7136 - val_accuracy: 0.7575
+Epoch 18/25
+102/102 - 0s - loss: 0.6797 - accuracy: 0.7700 - val_loss: 0.7034 - val_accuracy: 0.7616
+Epoch 19/25
+102/102 - 0s - loss: 0.6701 - accuracy: 0.7751 - val_loss: 0.6933 - val_accuracy: 0.7656
+Epoch 20/25
+102/102 - 0s - loss: 0.6590 - accuracy: 0.7776 - val_loss: 0.6867 - val_accuracy: 0.7650
+Epoch 21/25
+102/102 - 0s - loss: 0.6503 - accuracy: 0.7828 - val_loss: 0.6757 - val_accuracy: 0.7737
+Epoch 22/25
+102/102 - 0s - loss: 0.6409 - accuracy: 0.7839 - val_loss: 0.6676 - val_accuracy: 0.7737
+Epoch 23/25
+102/102 - 0s - loss: 0.6321 - accuracy: 0.7870 - val_loss: 0.6647 - val_accuracy: 0.7801
+Epoch 24/25
+102/102 - 0s - loss: 0.6253 - accuracy: 0.7926 - val_loss: 0.6508 - val_accuracy: 0.7778
+Epoch 25/25
+102/102 - 0s - loss: 0.6160 - accuracy: 0.7969 - val_loss: 0.6466 - val_accuracy: 0.7841
+6/6 - 0s - loss: 0.8519 - accuracy: 0.6343
+
+
+Loss and metrics for TANH model with 64 batches and 25 epochs: 
+Test Loss is 0.85 
+Test Accuracy is 63.43 %
+
+Epoch 1/40
+102/102 - 1s - loss: 1.3273 - accuracy: 0.3936 - val_loss: 1.2123 - val_accuracy: 0.5341
+Epoch 2/40
+102/102 - 0s - loss: 1.1418 - accuracy: 0.5933 - val_loss: 1.0865 - val_accuracy: 0.6105
+Epoch 3/40
+102/102 - 0s - loss: 1.0434 - accuracy: 0.6401 - val_loss: 1.0129 - val_accuracy: 0.6609
+Epoch 4/40
+102/102 - 0s - loss: 0.9793 - accuracy: 0.6783 - val_loss: 0.9620 - val_accuracy: 0.6655
+Epoch 5/40
+102/102 - 0s - loss: 0.9330 - accuracy: 0.6911 - val_loss: 0.9220 - val_accuracy: 0.6985
+Epoch 6/40
+102/102 - 0s - loss: 0.8945 - accuracy: 0.7028 - val_loss: 0.8941 - val_accuracy: 0.6944
+Epoch 7/40
+102/102 - 0s - loss: 0.8648 - accuracy: 0.7132 - val_loss: 0.8641 - val_accuracy: 0.7164
+Epoch 8/40
+102/102 - 0s - loss: 0.8370 - accuracy: 0.7213 - val_loss: 0.8438 - val_accuracy: 0.7245
+Epoch 9/40
+102/102 - 0s - loss: 0.8140 - accuracy: 0.7322 - val_loss: 0.8213 - val_accuracy: 0.7222
+Epoch 10/40
+102/102 - 0s - loss: 0.7937 - accuracy: 0.7362 - val_loss: 0.8040 - val_accuracy: 0.7274
+Epoch 11/40
+102/102 - 0s - loss: 0.7748 - accuracy: 0.7434 - val_loss: 0.7882 - val_accuracy: 0.7361
+Epoch 12/40
+102/102 - 0s - loss: 0.7581 - accuracy: 0.7487 - val_loss: 0.7759 - val_accuracy: 0.7419
+Epoch 13/40
+102/102 - 0s - loss: 0.7426 - accuracy: 0.7524 - val_loss: 0.7600 - val_accuracy: 0.7407
+Epoch 14/40
+102/102 - 0s - loss: 0.7288 - accuracy: 0.7576 - val_loss: 0.7460 - val_accuracy: 0.7471
+Epoch 15/40
+102/102 - 0s - loss: 0.7156 - accuracy: 0.7583 - val_loss: 0.7349 - val_accuracy: 0.7483
+Epoch 16/40
+102/102 - 0s - loss: 0.7031 - accuracy: 0.7644 - val_loss: 0.7220 - val_accuracy: 0.7535
+Epoch 17/40
+102/102 - 0s - loss: 0.6910 - accuracy: 0.7689 - val_loss: 0.7137 - val_accuracy: 0.7569
+Epoch 18/40
+102/102 - 0s - loss: 0.6798 - accuracy: 0.7700 - val_loss: 0.7032 - val_accuracy: 0.7622
+Epoch 19/40
+102/102 - 0s - loss: 0.6700 - accuracy: 0.7762 - val_loss: 0.6930 - val_accuracy: 0.7616
+Epoch 20/40
+102/102 - 0s - loss: 0.6609 - accuracy: 0.7808 - val_loss: 0.6841 - val_accuracy: 0.7674
+Epoch 21/40
+102/102 - 0s - loss: 0.6509 - accuracy: 0.7851 - val_loss: 0.6757 - val_accuracy: 0.7703
+Epoch 22/40
+102/102 - 0s - loss: 0.6415 - accuracy: 0.7854 - val_loss: 0.6678 - val_accuracy: 0.7749
+Epoch 23/40
+102/102 - 0s - loss: 0.6319 - accuracy: 0.7896 - val_loss: 0.6600 - val_accuracy: 0.7778
+Epoch 24/40
+102/102 - 0s - loss: 0.6237 - accuracy: 0.7944 - val_loss: 0.6592 - val_accuracy: 0.7812
+Epoch 25/40
+102/102 - 0s - loss: 0.6168 - accuracy: 0.7935 - val_loss: 0.6444 - val_accuracy: 0.7824
+Epoch 26/40
+102/102 - 0s - loss: 0.6081 - accuracy: 0.7983 - val_loss: 0.6388 - val_accuracy: 0.7836
+Epoch 27/40
+102/102 - 0s - loss: 0.6012 - accuracy: 0.7990 - val_loss: 0.6331 - val_accuracy: 0.7870
+Epoch 28/40
+102/102 - 0s - loss: 0.5932 - accuracy: 0.8034 - val_loss: 0.6273 - val_accuracy: 0.7899
+Epoch 29/40
+102/102 - 0s - loss: 0.5868 - accuracy: 0.8063 - val_loss: 0.6180 - val_accuracy: 0.7934
+Epoch 30/40
+102/102 - 0s - loss: 0.5796 - accuracy: 0.8078 - val_loss: 0.6144 - val_accuracy: 0.7951
+Epoch 31/40
+102/102 - 0s - loss: 0.5733 - accuracy: 0.8109 - val_loss: 0.6075 - val_accuracy: 0.7975
+Epoch 32/40
+102/102 - 0s - loss: 0.5660 - accuracy: 0.8102 - val_loss: 0.5991 - val_accuracy: 0.7992
+Epoch 33/40
+102/102 - 0s - loss: 0.5601 - accuracy: 0.8150 - val_loss: 0.5951 - val_accuracy: 0.8009
+Epoch 34/40
+102/102 - 0s - loss: 0.5542 - accuracy: 0.8170 - val_loss: 0.5898 - val_accuracy: 0.8027
+Epoch 35/40
+102/102 - 0s - loss: 0.5484 - accuracy: 0.8191 - val_loss: 0.5885 - val_accuracy: 0.8073
+Epoch 36/40
+102/102 - 0s - loss: 0.5423 - accuracy: 0.8219 - val_loss: 0.5795 - val_accuracy: 0.8050
+Epoch 37/40
+102/102 - 0s - loss: 0.5366 - accuracy: 0.8245 - val_loss: 0.5754 - val_accuracy: 0.8102
+Epoch 38/40
+102/102 - 0s - loss: 0.5310 - accuracy: 0.8268 - val_loss: 0.5700 - val_accuracy: 0.8137
+Epoch 39/40
+102/102 - 0s - loss: 0.5253 - accuracy: 0.8285 - val_loss: 0.5711 - val_accuracy: 0.8113
+Epoch 40/40
+102/102 - 0s - loss: 0.5202 - accuracy: 0.8323 - val_loss: 0.5598 - val_accuracy: 0.8113
+6/6 - 0s - loss: 0.8425 - accuracy: 0.6343
+
+
+Loss and metrics for TANH model with 64 batches and 40 epochs: 
+Test Loss is 0.84 
+Test Accuracy is 63.43 %
+
+Epoch 1/50
+203/203 - 1s - loss: 1.2295 - accuracy: 0.4887 - val_loss: 1.1020 - val_accuracy: 0.5891
+Epoch 2/50
+203/203 - 1s - loss: 1.0363 - accuracy: 0.6725 - val_loss: 0.9876 - val_accuracy: 0.6985
+Epoch 3/50
+203/203 - 1s - loss: 0.9498 - accuracy: 0.7210 - val_loss: 0.9214 - val_accuracy: 0.7251
+Epoch 4/50
+203/203 - 1s - loss: 0.8896 - accuracy: 0.7402 - val_loss: 0.8712 - val_accuracy: 0.7355
+Epoch 5/50
+203/203 - 1s - loss: 0.8371 - accuracy: 0.7584 - val_loss: 0.8248 - val_accuracy: 0.7488
+Epoch 6/50
+203/203 - 1s - loss: 0.7939 - accuracy: 0.7734 - val_loss: 0.7848 - val_accuracy: 0.7656
+Epoch 7/50
+203/203 - 1s - loss: 0.7557 - accuracy: 0.7817 - val_loss: 0.7548 - val_accuracy: 0.7726
+Epoch 8/50
+203/203 - 1s - loss: 0.7222 - accuracy: 0.7910 - val_loss: 0.7194 - val_accuracy: 0.7841
+Epoch 9/50
+203/203 - 1s - loss: 0.6914 - accuracy: 0.8001 - val_loss: 0.6899 - val_accuracy: 0.7922
+Epoch 10/50
+203/203 - 1s - loss: 0.6643 - accuracy: 0.8048 - val_loss: 0.6654 - val_accuracy: 0.7946
+Epoch 11/50
+203/203 - 1s - loss: 0.6405 - accuracy: 0.8151 - val_loss: 0.6432 - val_accuracy: 0.8009
+Epoch 12/50
+203/203 - 1s - loss: 0.6177 - accuracy: 0.8168 - val_loss: 0.6230 - val_accuracy: 0.8073
+Epoch 13/50
+203/203 - 1s - loss: 0.5980 - accuracy: 0.8227 - val_loss: 0.6047 - val_accuracy: 0.8166
+Epoch 14/50
+203/203 - 1s - loss: 0.5802 - accuracy: 0.8290 - val_loss: 0.5904 - val_accuracy: 0.8189
+Epoch 15/50
+203/203 - 1s - loss: 0.5624 - accuracy: 0.8316 - val_loss: 0.5704 - val_accuracy: 0.8241
+Epoch 16/50
+203/203 - 1s - loss: 0.5453 - accuracy: 0.8377 - val_loss: 0.5588 - val_accuracy: 0.8322
+Epoch 17/50
+203/203 - 1s - loss: 0.5301 - accuracy: 0.8434 - val_loss: 0.5418 - val_accuracy: 0.8345
+Epoch 18/50
+203/203 - 1s - loss: 0.5171 - accuracy: 0.8454 - val_loss: 0.5301 - val_accuracy: 0.8368
+Epoch 19/50
+203/203 - 1s - loss: 0.5042 - accuracy: 0.8472 - val_loss: 0.5200 - val_accuracy: 0.8409
+Epoch 20/50
+203/203 - 1s - loss: 0.4909 - accuracy: 0.8534 - val_loss: 0.5078 - val_accuracy: 0.8478
+Epoch 21/50
+203/203 - 1s - loss: 0.4797 - accuracy: 0.8560 - val_loss: 0.4955 - val_accuracy: 0.8478
+Epoch 22/50
+203/203 - 1s - loss: 0.4691 - accuracy: 0.8571 - val_loss: 0.4847 - val_accuracy: 0.8547
+Epoch 23/50
+203/203 - 1s - loss: 0.4593 - accuracy: 0.8601 - val_loss: 0.4767 - val_accuracy: 0.8571
+Epoch 24/50
+203/203 - 1s - loss: 0.4501 - accuracy: 0.8635 - val_loss: 0.4693 - val_accuracy: 0.8553
+Epoch 25/50
+203/203 - 1s - loss: 0.4410 - accuracy: 0.8652 - val_loss: 0.4591 - val_accuracy: 0.8640
+Epoch 26/50
+203/203 - 1s - loss: 0.4335 - accuracy: 0.8687 - val_loss: 0.4541 - val_accuracy: 0.8628
+Epoch 27/50
+203/203 - 1s - loss: 0.4253 - accuracy: 0.8704 - val_loss: 0.4453 - val_accuracy: 0.8663
+Epoch 28/50
+203/203 - 1s - loss: 0.4182 - accuracy: 0.8716 - val_loss: 0.4373 - val_accuracy: 0.8675
+Epoch 29/50
+203/203 - 1s - loss: 0.4108 - accuracy: 0.8726 - val_loss: 0.4320 - val_accuracy: 0.8698
+Epoch 30/50
+203/203 - 1s - loss: 0.4043 - accuracy: 0.8746 - val_loss: 0.4270 - val_accuracy: 0.8698
+Epoch 31/50
+203/203 - 1s - loss: 0.3984 - accuracy: 0.8772 - val_loss: 0.4192 - val_accuracy: 0.8738
+Epoch 32/50
+203/203 - 1s - loss: 0.3913 - accuracy: 0.8767 - val_loss: 0.4128 - val_accuracy: 0.8767
+Epoch 33/50
+203/203 - 1s - loss: 0.3859 - accuracy: 0.8800 - val_loss: 0.4112 - val_accuracy: 0.8744
+Epoch 34/50
+203/203 - 1s - loss: 0.3811 - accuracy: 0.8814 - val_loss: 0.4032 - val_accuracy: 0.8785
+Epoch 35/50
+203/203 - 1s - loss: 0.3751 - accuracy: 0.8828 - val_loss: 0.4030 - val_accuracy: 0.8802
+Epoch 36/50
+203/203 - 1s - loss: 0.3702 - accuracy: 0.8817 - val_loss: 0.3955 - val_accuracy: 0.8791
+Epoch 37/50
+203/203 - 1s - loss: 0.3662 - accuracy: 0.8838 - val_loss: 0.3903 - val_accuracy: 0.8837
+Epoch 38/50
+203/203 - 1s - loss: 0.3602 - accuracy: 0.8852 - val_loss: 0.3890 - val_accuracy: 0.8837
+Epoch 39/50
+203/203 - 1s - loss: 0.3572 - accuracy: 0.8859 - val_loss: 0.3818 - val_accuracy: 0.8848
+Epoch 40/50
+203/203 - 1s - loss: 0.3520 - accuracy: 0.8892 - val_loss: 0.3797 - val_accuracy: 0.8895
+Epoch 41/50
+203/203 - 1s - loss: 0.3482 - accuracy: 0.8882 - val_loss: 0.3760 - val_accuracy: 0.8924
+Epoch 42/50
+203/203 - 1s - loss: 0.3448 - accuracy: 0.8906 - val_loss: 0.3717 - val_accuracy: 0.8912
+Epoch 43/50
+203/203 - 1s - loss: 0.3398 - accuracy: 0.8933 - val_loss: 0.3708 - val_accuracy: 0.8843
+Epoch 44/50
+203/203 - 1s - loss: 0.3377 - accuracy: 0.8922 - val_loss: 0.3656 - val_accuracy: 0.8912
+Epoch 45/50
+203/203 - 1s - loss: 0.3323 - accuracy: 0.8945 - val_loss: 0.3647 - val_accuracy: 0.8924
+Epoch 46/50
+203/203 - 1s - loss: 0.3298 - accuracy: 0.8950 - val_loss: 0.3589 - val_accuracy: 0.8953
+Epoch 47/50
+203/203 - 1s - loss: 0.3261 - accuracy: 0.8960 - val_loss: 0.3579 - val_accuracy: 0.8912
+Epoch 48/50
+203/203 - 1s - loss: 0.3218 - accuracy: 0.8962 - val_loss: 0.3579 - val_accuracy: 0.8912
+Epoch 49/50
+203/203 - 1s - loss: 0.3196 - accuracy: 0.8993 - val_loss: 0.3526 - val_accuracy: 0.8958
+Epoch 50/50
+203/203 - 1s - loss: 0.3168 - accuracy: 0.8994 - val_loss: 0.3472 - val_accuracy: 0.8976
+6/6 - 0s - loss: 0.8754 - accuracy: 0.6629
+
+
+Loss and metrics for RELU model with 32 batches and 50 epochs: 
+Test Loss is 0.88 
+Test Accuracy is 66.29 %
+
+Epoch 1/50
+203/203 - 2s - loss: 1.1480 - accuracy: 0.5344 - val_loss: 0.9479 - val_accuracy: 0.6470
+Epoch 2/50
+203/203 - 1s - loss: 0.7338 - accuracy: 0.7252 - val_loss: 0.6680 - val_accuracy: 0.7714
+Epoch 3/50
+203/203 - 1s - loss: 0.6231 - accuracy: 0.7822 - val_loss: 0.5659 - val_accuracy: 0.8113
+Epoch 4/50
+203/203 - 1s - loss: 0.5597 - accuracy: 0.8082 - val_loss: 0.5086 - val_accuracy: 0.8310
+Epoch 5/50
+203/203 - 1s - loss: 0.5128 - accuracy: 0.8298 - val_loss: 0.4866 - val_accuracy: 0.8403
+Epoch 6/50
+203/203 - 1s - loss: 0.4934 - accuracy: 0.8336 - val_loss: 0.4637 - val_accuracy: 0.8438
+Epoch 7/50
+203/203 - 1s - loss: 0.4649 - accuracy: 0.8472 - val_loss: 0.4364 - val_accuracy: 0.8600
+Epoch 8/50
+203/203 - 1s - loss: 0.4466 - accuracy: 0.8534 - val_loss: 0.4293 - val_accuracy: 0.8646
+Epoch 9/50
+203/203 - 1s - loss: 0.4279 - accuracy: 0.8613 - val_loss: 0.4099 - val_accuracy: 0.8709
+Epoch 10/50
+203/203 - 1s - loss: 0.4138 - accuracy: 0.8652 - val_loss: 0.3962 - val_accuracy: 0.8767
+Epoch 11/50
+203/203 - 1s - loss: 0.4066 - accuracy: 0.8636 - val_loss: 0.3939 - val_accuracy: 0.8785
+Epoch 12/50
+203/203 - 1s - loss: 0.4032 - accuracy: 0.8659 - val_loss: 0.3948 - val_accuracy: 0.8727
+Epoch 13/50
+203/203 - 1s - loss: 0.3840 - accuracy: 0.8719 - val_loss: 0.3974 - val_accuracy: 0.8738
+Epoch 14/50
+203/203 - 1s - loss: 0.3794 - accuracy: 0.8753 - val_loss: 0.3758 - val_accuracy: 0.8837
+Epoch 15/50
+203/203 - 1s - loss: 0.3611 - accuracy: 0.8845 - val_loss: 0.3808 - val_accuracy: 0.8808
+Epoch 16/50
+203/203 - 1s - loss: 0.3628 - accuracy: 0.8832 - val_loss: 0.3737 - val_accuracy: 0.8802
+Epoch 17/50
+203/203 - 1s - loss: 0.3501 - accuracy: 0.8902 - val_loss: 0.3634 - val_accuracy: 0.8889
+Epoch 18/50
+203/203 - 1s - loss: 0.3432 - accuracy: 0.8866 - val_loss: 0.3601 - val_accuracy: 0.8929
+Epoch 19/50
+203/203 - 1s - loss: 0.3290 - accuracy: 0.8945 - val_loss: 0.3846 - val_accuracy: 0.8773
+Epoch 20/50
+203/203 - 1s - loss: 0.3336 - accuracy: 0.8889 - val_loss: 0.3461 - val_accuracy: 0.8912
+Epoch 21/50
+203/203 - 1s - loss: 0.3193 - accuracy: 0.9001 - val_loss: 0.3360 - val_accuracy: 0.8958
+Epoch 22/50
+203/203 - 1s - loss: 0.3169 - accuracy: 0.8984 - val_loss: 0.3458 - val_accuracy: 0.8912
+Epoch 23/50
+203/203 - 1s - loss: 0.3135 - accuracy: 0.9010 - val_loss: 0.3405 - val_accuracy: 0.8941
+Epoch 24/50
+203/203 - 1s - loss: 0.3086 - accuracy: 0.9022 - val_loss: 0.3740 - val_accuracy: 0.8808
+Epoch 25/50
+203/203 - 1s - loss: 0.3089 - accuracy: 0.9005 - val_loss: 0.3274 - val_accuracy: 0.8987
+Epoch 26/50
+203/203 - 1s - loss: 0.3002 - accuracy: 0.9033 - val_loss: 0.3270 - val_accuracy: 0.8970
+Epoch 27/50
+203/203 - 1s - loss: 0.2933 - accuracy: 0.9106 - val_loss: 0.3271 - val_accuracy: 0.8981
+Epoch 28/50
+203/203 - 1s - loss: 0.2877 - accuracy: 0.9116 - val_loss: 0.3321 - val_accuracy: 0.8970
+Epoch 29/50
+203/203 - 1s - loss: 0.2879 - accuracy: 0.9087 - val_loss: 0.3238 - val_accuracy: 0.8964
+Epoch 30/50
+203/203 - 1s - loss: 0.2857 - accuracy: 0.9072 - val_loss: 0.3219 - val_accuracy: 0.9005
+Epoch 31/50
+203/203 - 1s - loss: 0.2775 - accuracy: 0.9143 - val_loss: 0.3548 - val_accuracy: 0.8854
+Epoch 32/50
+203/203 - 1s - loss: 0.2764 - accuracy: 0.9163 - val_loss: 0.3311 - val_accuracy: 0.8929
+Epoch 33/50
+203/203 - 1s - loss: 0.2691 - accuracy: 0.9147 - val_loss: 0.3273 - val_accuracy: 0.8947
+Epoch 34/50
+203/203 - 1s - loss: 0.2628 - accuracy: 0.9198 - val_loss: 0.3088 - val_accuracy: 0.9051
+Epoch 35/50
+203/203 - 1s - loss: 0.2634 - accuracy: 0.9171 - val_loss: 0.3037 - val_accuracy: 0.9016
+Epoch 36/50
+203/203 - 1s - loss: 0.2592 - accuracy: 0.9181 - val_loss: 0.3068 - val_accuracy: 0.9051
+Epoch 37/50
+203/203 - 1s - loss: 0.2535 - accuracy: 0.9218 - val_loss: 0.2982 - val_accuracy: 0.9022
+Epoch 38/50
+203/203 - 1s - loss: 0.2514 - accuracy: 0.9228 - val_loss: 0.3299 - val_accuracy: 0.8912
+Epoch 39/50
+203/203 - 1s - loss: 0.2513 - accuracy: 0.9222 - val_loss: 0.3048 - val_accuracy: 0.9062
+Epoch 40/50
+203/203 - 1s - loss: 0.2549 - accuracy: 0.9195 - val_loss: 0.3034 - val_accuracy: 0.9016
+Epoch 41/50
+203/203 - 1s - loss: 0.2505 - accuracy: 0.9212 - val_loss: 0.3093 - val_accuracy: 0.9028
+Epoch 42/50
+203/203 - 1s - loss: 0.2452 - accuracy: 0.9243 - val_loss: 0.2986 - val_accuracy: 0.9074
+Epoch 43/50
+203/203 - 1s - loss: 0.2421 - accuracy: 0.9222 - val_loss: 0.2911 - val_accuracy: 0.9091
+Epoch 44/50
+203/203 - 1s - loss: 0.2393 - accuracy: 0.9249 - val_loss: 0.2900 - val_accuracy: 0.9057
+Epoch 45/50
+203/203 - 1s - loss: 0.2391 - accuracy: 0.9262 - val_loss: 0.2899 - val_accuracy: 0.9080
+Epoch 46/50
+203/203 - 1s - loss: 0.2340 - accuracy: 0.9245 - val_loss: 0.2921 - val_accuracy: 0.9074
+Epoch 47/50
+203/203 - 1s - loss: 0.2326 - accuracy: 0.9305 - val_loss: 0.2948 - val_accuracy: 0.9068
+Epoch 48/50
+203/203 - 1s - loss: 0.2266 - accuracy: 0.9313 - val_loss: 0.2940 - val_accuracy: 0.9057
+Epoch 49/50
+203/203 - 1s - loss: 0.2276 - accuracy: 0.9279 - val_loss: 0.2828 - val_accuracy: 0.9074
+Epoch 50/50
+203/203 - 1s - loss: 0.2203 - accuracy: 0.9303 - val_loss: 0.2853 - val_accuracy: 0.9034
+6/6 - 0s - loss: 0.8670 - accuracy: 0.6286
+
+
+Loss and metrics for TANH model with batch normalization, 32 batches and 50 epochs: 
+Test Loss is 0.87 
+Test Accuracy is 62.86 %
+
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+permute (Permute)            (None, 32, 32, 1)         0         
+_________________________________________________________________
+Conv2D_1 (Conv2D)            (None, 32, 32, 64)        640       
+_________________________________________________________________
+dropout (Dropout)            (None, 32, 32, 64)        0         
+_________________________________________________________________
+batch_normalization_2 (Batch (None, 32, 32, 64)        128       
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) (None, 16, 16, 64)        0         
+_________________________________________________________________
+Conv2D_2 (Conv2D)            (None, 16, 16, 128)       73856     
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 16, 16, 128)       0         
+_________________________________________________________________
+batch_normalization_3 (Batch (None, 16, 16, 128)       64        
+_________________________________________________________________
+Conv2D_3 (Conv2D)            (None, 16, 16, 128)       147584    
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 16, 16, 128)       0         
+_________________________________________________________________
+batch_normalization_4 (Batch (None, 16, 16, 128)       64        
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 8, 8, 128)         0         
+_________________________________________________________________
+Conv2D_4 (Conv2D)            (None, 8, 8, 256)         295168    
+_________________________________________________________________
+dropout_3 (Dropout)          (None, 8, 8, 256)         0         
+_________________________________________________________________
+batch_normalization_5 (Batch (None, 8, 8, 256)         32        
+_________________________________________________________________
+Conv2D_5 (Conv2D)            (None, 8, 8, 256)         590080    
+_________________________________________________________________
+dropout_4 (Dropout)          (None, 8, 8, 256)         0         
+_________________________________________________________________
+batch_normalization_6 (Batch (None, 8, 8, 256)         32        
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 4, 4, 256)         0         
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 4096)              0         
+_________________________________________________________________
+FCN_1 (Dense)                (None, 512)               2097664   
+_________________________________________________________________
+dropout_5 (Dropout)          (None, 512)               0         
+_________________________________________________________________
+FCN_2 (Dense)                (None, 128)               65664     
+_________________________________________________________________
+FCN_3 (Dense)                (None, 4)                 516       
+=================================================================
+Total params: 3,271,492
+Trainable params: 3,271,332
+Non-trainable params: 160
+_________________________________________________________________
+Epoch 1/25
+102/102 [==============================] - 17s 161ms/step - loss: 8.2613 - acc: 0.3761 - val_loss: 8.1538 - val_acc: 0.2500
+Epoch 2/25
+102/102 [==============================] - 16s 156ms/step - loss: 7.6558 - acc: 0.5183 - val_loss: 8.5623 - val_acc: 0.2500
+Epoch 3/25
+102/102 [==============================] - 16s 154ms/step - loss: 7.4787 - acc: 0.5647 - val_loss: 8.7814 - val_acc: 0.2500
+Epoch 4/25
+102/102 [==============================] - 16s 154ms/step - loss: 7.3738 - acc: 0.5877 - val_loss: 8.8004 - val_acc: 0.2512
+Epoch 5/25
+102/102 [==============================] - 16s 153ms/step - loss: 7.2207 - acc: 0.6336 - val_loss: 8.6038 - val_acc: 0.2824
+Epoch 6/25
+102/102 [==============================] - 16s 153ms/step - loss: 7.1237 - acc: 0.6732 - val_loss: 8.1869 - val_acc: 0.3339
+Epoch 7/25
+102/102 [==============================] - 16s 155ms/step - loss: 7.0794 - acc: 0.6743 - val_loss: 8.0346 - val_acc: 0.3825
+Epoch 8/25
+102/102 [==============================] - 16s 155ms/step - loss: 7.0294 - acc: 0.6969 - val_loss: 7.9281 - val_acc: 0.4022
+Epoch 9/25
+102/102 [==============================] - 16s 156ms/step - loss: 6.9947 - acc: 0.6963 - val_loss: 7.8683 - val_acc: 0.4155
+Epoch 10/25
+102/102 [==============================] - 16s 156ms/step - loss: 6.9691 - acc: 0.6929 - val_loss: 7.8649 - val_acc: 0.4196
+Epoch 11/25
+102/102 [==============================] - 16s 154ms/step - loss: 6.9029 - acc: 0.7226 - val_loss: 7.8665 - val_acc: 0.4172
+Epoch 12/25
+102/102 [==============================] - 16s 155ms/step - loss: 6.8601 - acc: 0.7354 - val_loss: 7.8190 - val_acc: 0.4190
+Epoch 13/25
+102/102 [==============================] - 16s 154ms/step - loss: 6.8115 - acc: 0.7377 - val_loss: 7.7819 - val_acc: 0.4329
+Epoch 14/25
+102/102 [==============================] - 16s 155ms/step - loss: 6.8049 - acc: 0.7362 - val_loss: 7.8062 - val_acc: 0.4161
+Epoch 15/25
+102/102 [==============================] - 16s 154ms/step - loss: 6.7399 - acc: 0.7501 - val_loss: 7.8162 - val_acc: 0.4138
+Epoch 16/25
+102/102 [==============================] - 16s 154ms/step - loss: 6.7197 - acc: 0.7602 - val_loss: 7.8050 - val_acc: 0.4184
+Epoch 17/25
+102/102 [==============================] - 16s 153ms/step - loss: 6.6613 - acc: 0.7666 - val_loss: 7.8008 - val_acc: 0.4103
+Epoch 18/25
+102/102 [==============================] - 16s 154ms/step - loss: 6.6648 - acc: 0.7707 - val_loss: 7.7657 - val_acc: 0.4178
+Epoch 19/25
+102/102 [==============================] - 16s 155ms/step - loss: 6.6418 - acc: 0.7616 - val_loss: 7.7639 - val_acc: 0.4184
+Epoch 20/25
+102/102 [==============================] - 16s 156ms/step - loss: 6.6093 - acc: 0.7754 - val_loss: 7.7651 - val_acc: 0.4149
+Epoch 21/25
+102/102 [==============================] - 16s 154ms/step - loss: 6.5859 - acc: 0.7793 - val_loss: 7.7198 - val_acc: 0.4288
+Epoch 22/25
+102/102 [==============================] - 16s 154ms/step - loss: 6.5318 - acc: 0.7881 - val_loss: 7.7222 - val_acc: 0.4236
+Epoch 23/25
+102/102 [==============================] - 16s 154ms/step - loss: 6.5226 - acc: 0.7932 - val_loss: 7.6979 - val_acc: 0.4259
+Epoch 24/25
+102/102 [==============================] - 16s 155ms/step - loss: 6.5269 - acc: 0.7866 - val_loss: 7.6881 - val_acc: 0.4346
+Epoch 25/25
+102/102 [==============================] - 16s 157ms/step - loss: 6.4846 - acc: 0.7926 - val_loss: 7.6634 - val_acc: 0.4381
+6/6 [==============================] - 0s 16ms/step - loss: 8.3135 - acc: 0.3371
+test loss, test acc: [8.313516616821289, 0.33714285492897034]
+Model: "sequential_1"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+permute_1 (Permute)          (None, 32, 32, 1)         0         
+_________________________________________________________________
+Conv2D_1 (Conv2D)            (None, 32, 32, 32)        320       
+_________________________________________________________________
+dropout_6 (Dropout)          (None, 32, 32, 32)        0         
+_________________________________________________________________
+batch_normalization_7 (Batch (None, 32, 32, 32)        128       
+_________________________________________________________________
+max_pooling2d_3 (MaxPooling2 (None, 16, 16, 32)        0         
+_________________________________________________________________
+Conv2D_2 (Conv2D)            (None, 16, 16, 64)        18496     
+_________________________________________________________________
+dropout_7 (Dropout)          (None, 16, 16, 64)        0         
+_________________________________________________________________
+batch_normalization_8 (Batch (None, 16, 16, 64)        64        
+_________________________________________________________________
+Conv2D_3 (Conv2D)            (None, 16, 16, 64)        36928     
+_________________________________________________________________
+dropout_8 (Dropout)          (None, 16, 16, 64)        0         
+_________________________________________________________________
+batch_normalization_9 (Batch (None, 16, 16, 64)        64        
+_________________________________________________________________
+max_pooling2d_4 (MaxPooling2 (None, 8, 8, 64)          0         
+_________________________________________________________________
+Conv2D_4 (Conv2D)            (None, 8, 8, 128)         73856     
+_________________________________________________________________
+dropout_9 (Dropout)          (None, 8, 8, 128)         0         
+_________________________________________________________________
+batch_normalization_10 (Batc (None, 8, 8, 128)         32        
+_________________________________________________________________
+Conv2D_5 (Conv2D)            (None, 8, 8, 128)         147584    
+_________________________________________________________________
+dropout_10 (Dropout)         (None, 8, 8, 128)         0         
+_________________________________________________________________
+batch_normalization_11 (Batc (None, 8, 8, 128)         32        
+_________________________________________________________________
+max_pooling2d_5 (MaxPooling2 (None, 4, 4, 128)         0         
+_________________________________________________________________
+flatten_2 (Flatten)          (None, 2048)              0         
+_________________________________________________________________
+FCN_1 (Dense)                (None, 512)               1049088   
+_________________________________________________________________
+dropout_11 (Dropout)         (None, 512)               0         
+_________________________________________________________________
+FCN_2 (Dense)                (None, 128)               65664     
+_________________________________________________________________
+FCN_3 (Dense)                (None, 4)                 516       
+=================================================================
+Total params: 1,392,772
+Trainable params: 1,392,612
+Non-trainable params: 160
+_________________________________________________________________
+Epoch 1/25
+102/102 [==============================] - 9s 77ms/step - loss: 5.1016 - acc: 0.3661 - val_loss: 5.0258 - val_acc: 0.2500
+Epoch 2/25
+102/102 [==============================] - 7s 73ms/step - loss: 4.5511 - acc: 0.4953 - val_loss: 5.4294 - val_acc: 0.2500
+Epoch 3/25
+102/102 [==============================] - 7s 72ms/step - loss: 4.4387 - acc: 0.5240 - val_loss: 5.5691 - val_acc: 0.2500
+Epoch 4/25
+102/102 [==============================] - 7s 73ms/step - loss: 4.3611 - acc: 0.5438 - val_loss: 5.5754 - val_acc: 0.2500
+Epoch 5/25
+102/102 [==============================] - 7s 72ms/step - loss: 4.3150 - acc: 0.5603 - val_loss: 5.4911 - val_acc: 0.2494
+Epoch 6/25
+102/102 [==============================] - 7s 72ms/step - loss: 4.2445 - acc: 0.5740 - val_loss: 5.2905 - val_acc: 0.2425
+Epoch 7/25
+102/102 [==============================] - 7s 72ms/step - loss: 4.2402 - acc: 0.5786 - val_loss: 5.0629 - val_acc: 0.2766
+Epoch 8/25
+102/102 [==============================] - 7s 72ms/step - loss: 4.1857 - acc: 0.6127 - val_loss: 4.9443 - val_acc: 0.3229
+Epoch 9/25
+102/102 [==============================] - 7s 72ms/step - loss: 4.1681 - acc: 0.6138 - val_loss: 4.8892 - val_acc: 0.3345
+Epoch 10/25
+102/102 [==============================] - 7s 72ms/step - loss: 4.1606 - acc: 0.6106 - val_loss: 4.8678 - val_acc: 0.3380
+Epoch 11/25
+102/102 [==============================] - 7s 71ms/step - loss: 4.1334 - acc: 0.6262 - val_loss: 4.8543 - val_acc: 0.3420
+Epoch 12/25
+102/102 [==============================] - 7s 72ms/step - loss: 4.1149 - acc: 0.6292 - val_loss: 4.8480 - val_acc: 0.3432
+Epoch 13/25
+102/102 [==============================] - 7s 72ms/step - loss: 4.0920 - acc: 0.6401 - val_loss: 4.8474 - val_acc: 0.3455
+Epoch 14/25
+102/102 [==============================] - 7s 71ms/step - loss: 4.0727 - acc: 0.6467 - val_loss: 4.8529 - val_acc: 0.3484
+Epoch 15/25
+102/102 [==============================] - 7s 72ms/step - loss: 4.0363 - acc: 0.6482 - val_loss: 4.8599 - val_acc: 0.3455
+Epoch 16/25
+102/102 [==============================] - 7s 72ms/step - loss: 4.0313 - acc: 0.6551 - val_loss: 4.8530 - val_acc: 0.3466
+Epoch 17/25
+102/102 [==============================] - 7s 73ms/step - loss: 4.0342 - acc: 0.6488 - val_loss: 4.8546 - val_acc: 0.3472
+Epoch 18/25
+102/102 [==============================] - 7s 73ms/step - loss: 4.0158 - acc: 0.6628 - val_loss: 4.8534 - val_acc: 0.3490
+Epoch 19/25
+102/102 [==============================] - 7s 72ms/step - loss: 3.9985 - acc: 0.6598 - val_loss: 4.8612 - val_acc: 0.3484
+Epoch 20/25
+102/102 [==============================] - 7s 72ms/step - loss: 3.9906 - acc: 0.6716 - val_loss: 4.8664 - val_acc: 0.3478
+Epoch 21/25
+102/102 [==============================] - 7s 72ms/step - loss: 3.9872 - acc: 0.6783 - val_loss: 4.8570 - val_acc: 0.3507
+Epoch 22/25
+102/102 [==============================] - 7s 71ms/step - loss: 3.9747 - acc: 0.6642 - val_loss: 4.8580 - val_acc: 0.3519
+Epoch 23/25
+102/102 [==============================] - 7s 72ms/step - loss: 3.9591 - acc: 0.6852 - val_loss: 4.8657 - val_acc: 0.3519
+Epoch 24/25
+102/102 [==============================] - 7s 71ms/step - loss: 3.9499 - acc: 0.6801 - val_loss: 4.8747 - val_acc: 0.3501
+Epoch 25/25
+102/102 [==============================] - 7s 72ms/step - loss: 3.9424 - acc: 0.6884 - val_loss: 4.8791 - val_acc: 0.3507
+6/6 [==============================] - 0s 11ms/step - loss: 5.5736 - acc: 0.2514
+test loss, test acc: [5.573624610900879, 0.2514285743236542]
+
+All the results we got are:
+
+                  RELU (64 batches, 25 epochs)  TANH (64 batches, 25 epochs)  \
+Test loss                             0.798964                      0.851942   
+Test accuracy(%)                     66.285712                     63.428569   
+
+                  TANH (64 batches, 40 epochs)  RELU (32 batches, 50 epochs)  \
+Test loss                             0.842529                      0.875370   
+Test accuracy(%)                     63.428569                     66.285712   
+
+                  TANH (batch normalized, 32 batches, 50 epochs)  \
+Test loss                                               0.866978   
+Test accuracy(%)                                       62.857145   
+
+                  NNet ([64,128,128,256,256] filters)  \
+Test loss                                    8.313517   
+Test accuracy(%)                            33.714285   
+
+                  NNet ([32,64,64,128,128] filters)  
+Test loss                                  5.573625  
+Test accuracy(%)                          25.142857  
+
+
+(2ndPaper-t2) stu4@triton01:~/HW4_yoel_amit$ 

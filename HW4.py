@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# NNet=get_net(input_shape,drop,dropRate,reg)# HW: X-ray images classification
+#HW: X-ray images classification
 # --------------------------------------
 
 # Before you begin, open Mobaxterm and connect to triton with the user and password you were give with. Activate the environment `2ndPaper` and then type the command `pip install scikit-image`.
@@ -137,13 +137,13 @@ keras.backend.clear_session()
 #--------------------------Impelment your code here:-------------------------------------
 from tensorflow.keras.initializers import he_normal
 
-model_relu = Sequential(name="RELU (64 batches)")
+model_relu = Sequential(name='RELU_64_batches')
 model_relu.add(Flatten(input_shape=(32,32,1)))
 model_relu.add(Dense(300, kernel_initializer=tf.keras.initializers.he_normal()))
 model_relu.add(Activation('relu',name='Relu1'))
-model_relu.add(Dense(150))
+model_relu.add(Dense(150,kernel_initializer=tf.keras.initializers.he_normal()))
 model_relu.add(Activation('relu',name='Relu2'))
-model_relu.add(Dense(4))
+model_relu.add(Dense(4,kernel_initializer=tf.keras.initializers.he_normal()))
 model_relu.add(Activation('softmax'))
 #----------------------------------------------------------------------------------------
 
@@ -200,15 +200,10 @@ new_a_model = Sequential(name="TANH")
 new_a_model.add(Flatten(input_shape=(32,32,1)))
 new_a_model.add(Dense(300, kernel_initializer=tf.keras.initializers.he_normal()))
 new_a_model.add(Activation('tanh',name='tanh1'))
-new_a_model.add(Dense(150))
+new_a_model.add(Dense(150,kernel_initializer=tf.keras.initializers.he_normal()))
 new_a_model.add(Activation('tanh',name='tanh2'))
-new_a_model.add(Dense(4))
+new_a_model.add(Dense(4,kernel_initializer=tf.keras.initializers.he_normal()))
 new_a_model.add(Activation('softmax'))
-
-
-
-
-########### need to explain!!!
 
 #----------------------------------------------------------------------------------------
 
@@ -316,13 +311,13 @@ keras.backend.clear_session()
 
 
 #--------------------------Impelment your code here:-------------------------------------
-model_relu = Sequential(name='RELU (32 batches)')
+model_relu = Sequential(name='RELU_32_batches')
 model_relu.add(Flatten(input_shape=(32,32,1)))
 model_relu.add(Dense(300, kernel_initializer=tf.keras.initializers.he_normal()))
 model_relu.add(Activation('relu',name='Relu1'))
-model_relu.add(Dense(150))
+model_relu.add(Dense(150,kernel_initializer=tf.keras.initializers.he_normal()))
 model_relu.add(Activation('relu',name='Relu2'))
-model_relu.add(Dense(4))
+model_relu.add(Dense(4,kernel_initializer=tf.keras.initializers.he_normal()))
 model_relu.add(Activation('softmax'))
 #----------------------------------------------------------------------------------------
 
@@ -369,15 +364,15 @@ keras.backend.clear_session()
 
 
 #--------------------------Impelment your code here:-------------------------------------
-new_a_model = Sequential(name="TANH (batch normalized)")
+new_a_model = Sequential(name="TANH_batch_normalized")
 new_a_model.add(Flatten(input_shape=(32,32,1)))
 new_a_model.add(Dense(300, kernel_initializer=tf.keras.initializers.he_normal()))
-new_a_model.add(BatchNormalization())
 new_a_model.add(Activation('tanh',name='tanh1'))
-new_a_model.add(Dense(150))
 new_a_model.add(BatchNormalization())
+new_a_model.add(Dense(150,kernel_initializer=tf.keras.initializers.he_normal()))
 new_a_model.add(Activation('tanh',name='tanh2'))
-new_a_model.add(Dense(4))
+new_a_model.add(BatchNormalization())
+new_a_model.add(Dense(4,kernel_initializer=tf.keras.initializers.he_normal()))
 new_a_model.add(Activation('softmax'))
 #---------------------------------------------------------------------------------------
 
@@ -404,7 +399,7 @@ loss_and_metrics = new_a_model.evaluate(X_test, Y_test, verbose=2)
 print("\n\nLoss and metrics for TANH model with batch normalization, 32 batches and 50 epochs: ")
 print("Test Loss is {:.2f} ".format(loss_and_metrics[0]))
 print("Test Accuracy is {:.2f} %\n".format(100*loss_and_metrics[1]))
-results["TANH (batch normalized, 32 batches, 25 epochs)"] = [loss_and_metrics[0],100*loss_and_metrics[1]]
+results["TANH (batch normalized, 32 batches, 50 epochs)"] = [loss_and_metrics[0],100*loss_and_metrics[1]]
 #----------------------------------------------------------------------------------------
 
 
@@ -536,7 +531,7 @@ def get_net(input_shape,drop,dropRate,reg,filters):
     #Defining the network architecture:
     model = Sequential()
     model.add(Permute((1,2,3),input_shape = input_shape))
-    model.add(Conv2D(filters=filters[0], kernel_size=(3,3), padding='same', activation='relu',name='Conv2D_1',kernel_regularizer=regularizers.l2(reg)))
+    model.add(Conv2D(filters[0], kernel_size=(3,3), padding='same', activation='relu',name='Conv2D_1',kernel_regularizer=regularizers.l2(reg)))
     if drop:
         model.add(Dropout(rate=dropRate))
     model.add(BatchNormalization(axis=1))
